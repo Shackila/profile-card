@@ -1,7 +1,8 @@
-import "./App.css";
+import "./styles.css";
 import Avatar from "./Avatar.js";
 import Intro from "./Intro.js";
 import SkillList from "./SkillList.js";
+
 function App() {
   return (
     <div className="card">

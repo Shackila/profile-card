@@ -1,4 +1,4 @@
-import "./App.css";
+import "./styles.css";
 import pfp from "./pfp.jpg";
 
 const Avatar = () => {

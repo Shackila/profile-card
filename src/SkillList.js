@@ -1,12 +1,39 @@
 import Skill from "./Skill.js";
-import "./App.css";
+import "./styles.css";
+
+const skillsData = [
+  {
+    skill: "HTML+CSS",
+    level: "advanced",
+    color: "#2662EA",
+  },
+  {
+    skill: "JavaScript",
+    level: "advanced",
+    color: "#EFD81D",
+  },
+  {
+    skill: "Git and GitHub",
+    level: "intermediate",
+    color: "#E84F33",
+  },
+  {
+    skill: "React",
+    level: "beginner",
+    color: "#60DAFB",
+  },
+];
+
 const SkillList = () => {
   return (
-    <div className="skill">
-      <Skill className="skill-bg" skillTitle="Html5" emoji="💪" color="blue" />
-      <Skill skillTitle="CSS" emoji="💪" color="orange" />
-      <Skill skillTitle="JS" emoji="💪" color="red" />
-      <Skill skillTitle="ReactJS" emoji="👼" color="yellow" />
+    <div className="skill-list">
+      {skillsData.map((newSkills) => (
+        <Skill
+          className="skill-bg"
+          skillsObj={newSkills}
+          key={newSkills.name}
+        />
+      ))}
     </div>
   );
 };

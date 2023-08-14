@@ -1,10 +1,15 @@
-import "./App.css";
+import "./styles.css";
 
-const Skill = (props) => {
+const Skill = ({skillsObj}) => {
   return (
-    <div className="skill" style={{backgroundColor: props.color}}>
-      <span>{props.skillTitle}</span>
-      <span>{props.emoji}</span>
+    <div className="skill" style={{ backgroundColor: skillsObj.color }}>
+      <span>{skillsObj.skill}</span>
+      {/* <span>{skillsObj.level}</span> */}
+      <span>
+        {skillsObj.level === "advanced" && "💪"}
+        {skillsObj.level === "intermediate" && "⏳"}
+        {skillsObj.level === "beginner" && "👼"}
+      </span>
     </div>
   );
 };
